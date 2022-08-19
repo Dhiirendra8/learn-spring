@@ -1,0 +1,5 @@
+rootProject.name = 'spring-services'
+include 'restful-apis'
+include 'restful-apis:test-api'
+include 'security'
+include 'security:learn-spring-security'
