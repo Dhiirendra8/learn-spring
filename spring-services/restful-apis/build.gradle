@@ -1,0 +1,11 @@
+bootJar.enabled = false
+
+subprojects {
+    dependencies {
+        implementation project(':security:learn-spring-security')
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-security'
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        implementation 'org.springframework.boot:spring-boot-starter-data-cassandra'
+    }
+}

@@ -1,0 +1,17 @@
+bootJar.enabled = false
+
+dependencies {
+
+    implementation 'org.hibernate:hibernate-core:5.6.10.Final'
+    implementation 'mysql:mysql-connector-java:8.0.31'
+    implementation 'org.projectlombok:lombok:1.18.22'
+//    org.hibernate.dialect.MySQL8Dialect
+
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
