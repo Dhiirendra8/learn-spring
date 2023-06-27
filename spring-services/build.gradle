@@ -30,13 +30,30 @@ subprojects {
 	apply plugin: 'org.springframework.boot'
 	apply plugin: 'io.spring.dependency-management'
 
+	ext {
+		set('springCloudVersion', "2021.0.4")
+	}
+
 	dependencies {
 		implementation 'org.springframework.boot:spring-boot-starter'
 		implementation 'org.springframework.boot:spring-boot-starter-web'
 
+//		implementation 'org.springframework.cloud:spring-cloud-starter-config'
+//		implementation 'org.springframework.cloud:spring-cloud-starter-vault-config'
+//		implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+
+//		implementation 'com.amazonaws:aws-java-sdk:1.0.12'
+//		implementation 'com.amazonaws:aws-java-sdk-bom:1.11.1000'
 		//test dependencies
 		testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	}
+
+	dependencyManagement {
+		imports {
+			mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+		}
+	}
+
 	jar {
 		manifest {
 			attributes (

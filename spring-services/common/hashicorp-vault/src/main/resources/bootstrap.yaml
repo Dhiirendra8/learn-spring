@@ -1,0 +1,34 @@
+spring.application.name: vault-with-spring-boot
+spring.cloud.vault:
+  uri: http://localhost:8200
+  token: 00000000-0000-0000-0000-000000000000
+  scheme: http
+  aws:
+    enabled: true
+    role: readonly #sts-vault-role #
+    backend: aws
+    credential-type: assumed_role
+    access-key-property: cloud.aws.credentials.accessKey
+    secret-key-property: cloud.aws.credentials.secretKey
+    session-token-key-property: cloud.aws.credentials.sessionToken
+    ttl: 3600s
+    role-arn: arn:aws:iam::171076329106:role/readonly
+
+
+
+
+
+
+####### Sample assume_role configuration: #######
+#
+#spring.cloud.vault:
+#  aws:
+#    enabled: true
+#      role: sts-vault-role
+#      backend: aws
+#      credential-type: assumed_role
+#      access-key-property: cloud.aws.credentials.accessKey
+#      secret-key-property: cloud.aws.credentials.secretKey
+#      session-token-key-property: cloud.aws.credentials.sessionToken
+#      ttl: 3600s
+#      role-arn: arn:aws:iam::${AWS_ACCOUNT}:role/sts-app-role
