@@ -88,6 +88,11 @@ public class StreamCollectors {
 		System.out.println("1st Method - " + outEmps);
 		System.out.println("2nd Method - " +partitionBySalaryEmps);
 		System.out.println("3rd Method - " +groupingBySalaryEmps);
+
+
+		List<Integer> list = List.of(1,2,3,4,5,6,7,8,9);
+		Map<String,List<Integer>> m = list.stream().collect(Collectors.groupingBy(i -> i%2==0?"Even":"Odd"));
+		System.out.println(m);
 	}
 	
 

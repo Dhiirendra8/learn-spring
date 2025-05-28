@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class StreamAPI {
@@ -24,7 +26,7 @@ public class StreamAPI {
     lists.add(st4);
     lists.add(st5);
 
-    List<Student> rList = lists.stream().filter(s -> s.getAge() > 22).collect(Collectors.toList());
+    List<Student> rList = lists.stream().filter(s -> s.getAge() > 22).toList();
 
     for(Student s : rList){
         System.out.println(s.toString());
