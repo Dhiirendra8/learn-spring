@@ -1,4 +1,4 @@
-package com.java.learn.forkjoin;
+package com.java.learn.threads.forkjoin;
 
 import java.util.concurrent.RecursiveTask;
 

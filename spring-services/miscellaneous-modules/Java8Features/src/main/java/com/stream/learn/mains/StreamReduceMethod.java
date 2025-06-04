@@ -2,10 +2,7 @@ package com.stream.learn.mains;
 
 import com.stream.learn.model.Student;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.function.BinaryOperator;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -38,6 +35,7 @@ public class StreamReduceMethod {
         Student student1 = lists.stream().reduce(st1, BinaryOperator.minBy(Comparator.comparing(Student::getAge)));
         System.out.println(student);
         System.out.println(student1);
+
     }
 
     public static void program2(){

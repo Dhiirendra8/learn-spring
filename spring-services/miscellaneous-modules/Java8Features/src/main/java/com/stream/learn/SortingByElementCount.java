@@ -1,4 +1,4 @@
-package com.java.learn;
+package com.stream.learn;
 
 import java.util.*;
 import java.util.function.Function;
@@ -26,10 +26,9 @@ public class SortingByElementCount {
         System.out.println(map);
 
         List<Integer> sortedList = map.entrySet().stream()
-//                .sorted((a,b)->(Integer)a.getKey() - Integer.parseInt(b.getValue()+""))
                 .sorted(comparator)
                 .map(Map.Entry::getKey)
-                .collect(Collectors.toList());
+                .toList();
         List<Integer> listOut = new LinkedList<>();
         for(Integer i :sortedList){
             int len=Integer.parseInt(map.get(i).toString());
@@ -38,8 +37,6 @@ public class SortingByElementCount {
             }
         }
 
-
-        System.out.println(sortedList);
         System.out.println(listOut);
 
     }

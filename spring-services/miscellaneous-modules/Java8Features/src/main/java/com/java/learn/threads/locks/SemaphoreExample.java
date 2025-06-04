@@ -1,4 +1,4 @@
-package com.java.learn.threads;
+package com.java.learn.threads.locks;
 
 import java.util.concurrent.Semaphore;
 
