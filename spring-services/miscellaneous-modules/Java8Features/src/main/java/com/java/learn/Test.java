@@ -9,14 +9,29 @@ public class Test {
 
     private static Comparator<String> comparator = (a,b) -> (a==null || b==null)? -1:a.compareTo(b);
     public static void main(String[] args) {
-        Set<String> set = new TreeSet(comparator);
+//        Set<String> set = new TreeSet(comparator);
+////        set.add(null);
+//        set.add("abc");
+//        set.add("xyz");
 //        set.add(null);
-        set.add("abc");
-        set.add("xyz");
-        set.add(null);
-        set.add("lll");
-        set.add(null);
+//        set.add("lll");
+//        set.add(null);
+//
+//        System.out.println(set);
 
-        System.out.println(set);
+        method1(5);
+    }
+
+    public static void method1(int i){
+        if(i <1){
+            System.out.println("Finish");
+        }else{
+            for (int j = 0; j < i ; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+            method1(i-1);
+        }
+
     }
 }
